@@ -1,16 +1,11 @@
 from django.contrib.auth import get_user_model
 from django import forms
 from django.contrib.auth.models import User
-from .models import CostumUser, PatientUser
+from .models import CostumUser
 from django.contrib.auth.forms import UserChangeForm, UserCreationForm
 from random import *
 from django.conf import settings
 
-idefs = PatientUser.objects.all()
-
-non_allowed_identifer_user = []
-for idef in idefs:
-    non_allowed_identifer_user.append(idef.identifier)
 
 
 # creation random int (1000-9999)
@@ -25,12 +20,6 @@ class LoginForm(forms.Form):
     # id_user = forms.CharField()
     password = forms.CharField(max_length=200, widget=forms.PasswordInput(attrs={ "class": "form-control"}))
     
-    # def clean_identifier(self):
-    #     identifier = self.cleaned_data.get('identifier')
-    #     qs = PatientUser.objects.filter(identifier__iexact=identifier)
-    #     if not qs.exists():
-    #         raise forms.ValidationError('This is an invalid user.')
-    #     return identifier
     
 
 

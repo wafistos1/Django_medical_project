@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout, get_user_model
 from .forms import LoginForm, UserRegisterForm
-from .models import CostumUser, PatientUser 
+from .models import CostumUser
 from django.conf import settings
 from random import *
 from django.contrib.auth.decorators import login_required
@@ -13,7 +13,6 @@ from django.contrib.messages import SUCCESS, ERROR
 
 # User = get_user_model()   
 User = settings.AUTH_USER_MODEL
-
 
 
 def home(request):

@@ -68,7 +68,7 @@ class LoginView(View):
         try:
             user = authenticate(identifier=identifier, password = password)
         except:
-            messages.add_message(request,ERROR , f'Pas de patient avec cette Id')
+            messages.add_message(request,ERROR , f'Password or Id error')
             return redirect('login_patient')
         if user:
             login(request, user)

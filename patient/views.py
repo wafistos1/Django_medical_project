@@ -50,7 +50,7 @@ def register_view(request):
     context = {
         'form': form,
     }
-    return render(request, 'home.html', context)
+    return render(request, 'patient/register_patient.html', context)
     
 
 class LoginView(View):

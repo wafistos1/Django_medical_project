@@ -11,16 +11,30 @@
     <h1>Home page</h1>
     
 {% if request.user.is_authenticated %}
-    <h1> Is authenticated </h1>
+    
+<h1> Is authenticated </h1>
+<h2>Bonjour {{request.user.username }}</h2>
+{% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+    <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+
+
      
 {% else %}
-    <h1> Is Not authenticated </h1>
+    
+
+<h1> Is Not authenticated </h1>
     <form method='POST' action="">
         {% csrf_token %}
         {{  form.as_p }}
 
         <input type="submit" value="login">
     </form>
+   
     
 {% endif %}
 

@@ -93,7 +93,7 @@ WSGI_APPLICATION = 'medical.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'p1',
+        'NAME': 'test1',
         'USER': 'postgres',
         'PASSWORD': '123',
         'HOST': 'localhost',
@@ -165,5 +165,5 @@ LOGIN_REDIRECT_URL = 'home'
 LOGIN_URL = 'login_view'
 # AUTH_USER_MODEL = 'accounts.CostumUser' 
 
-db_from_env = dj_database_url.config(conn_max_age=500)
-DATABASES['default'].update(db_from_env)
+# db_from_env = dj_database_url.config(conn_max_age=500)
+# DATABASES['default'].update(db_from_env)

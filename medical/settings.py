@@ -165,5 +165,5 @@ LOGIN_REDIRECT_URL = 'home'
 LOGIN_URL = 'login_view'
 # AUTH_USER_MODEL = 'accounts.CostumUser' 
 
-# db_from_env = dj_database_url.config(conn_max_age=500)
-# DATABASES['default'].update(db_from_env)
+db_from_env = dj_database_url.config(conn_max_age=500)
+DATABASES['default'].update(db_from_env)

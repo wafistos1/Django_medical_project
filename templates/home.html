@@ -12,28 +12,30 @@
     
 {% if request.user.is_authenticated %}
     
-<h1> Is authenticated </h1>
-<h2>Bonjour {{request.user.username }}</h2>
-{% if messages %}
-<ul class="messages">
-    {% for message in messages %}
-    <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
-    {% endfor %}
-</ul>
-{% endif %}
+    <h1> Is authenticated </h1>
+    <h2>Bonjour {{request.user.username }}</h2>
 
+        {% if messages %}
+                <ul class="messages">
+                    {% for message in messages %}
+                    <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                    {% endfor %}
+                </ul>
+
+                
+        {% endif %}
+        
+        <a href="{%url 'account_logout' %}"><h3>go to logout </h3> </a>
+        <a href="{%url 'register_patient' %}"><h3><h3>Add new Patient </h3> </h3> </a>
+        
 
      
 {% else %}
     
 
 <h1> Is Not authenticated </h1>
-    <form method='POST' action="">
-        {% csrf_token %}
-        {{  form.as_p }}
-
-        <input type="submit" value="login">
-    </form>
+   <h3>go to login </h3>
+   <a href="{%url 'account_login' %}">Login</a>
    
     
 {% endif %}

@@ -6,7 +6,8 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Home page</h1>
+    <h1>Login patient page</h1>
+
 {% if user.is_authenticated %}
 <h3> Your are login with {{ user.patient.identifier }}</h3>
 <a href="{% url 'logout_patient'%}">Logout</a>

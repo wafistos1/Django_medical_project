@@ -12,6 +12,14 @@
 <h3> Your are login with {{ user.patient.identifier }}</h3>
 <a href="{% url 'logout_patient'%}">Logout</a>
 {% else %}
+
+{% if form.errors %}
+<ul>
+    <li>{{ form.errors }} <!-- display the form errors if they exist --></li>
+
+</ul>
+    
+{% endif %}
     <form method='POST' action="">
         {% csrf_token %}
         {{  form.as_p }}
@@ -19,6 +27,7 @@
         <input type="submit" value="login">
     </form>
 {% endif %}
+
 </body>
 
 {% if messages %}

@@ -65,11 +65,15 @@ class LoginView(View):
         form = LoginForm(request.POST or None)
         identifier = request.POST.get("identifier", None)
         password = request.POST.get("password", None)
-
-        user = authenticate(identifier=identifier, password = password)
+        try:
+            user = authenticate(identifier=identifier, password = password)
+        except:
+            messages.add_message(request,ERROR , f'Pas de patient avec cette Id')
+            return redirect('login_patient')
         if user:
             login(request, user)
             return redirect('home_patient')
+        
         context = {
             'form': form,
         }

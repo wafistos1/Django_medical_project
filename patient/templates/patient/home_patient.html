@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Home page</h1>
+    
+{% if request.user.is_authenticated %}
+    <h1> Is authenticated </h1>
+     <h3> Patient Numero: {{ request.user.patient.identifier }}</h3>
+     <a type="submit" href="{% url 'logout_patient' %}">logout</a>
+{% else %}
+    <h1> Is Not authenticated </h1>
+    <a type="submit" href="{% url 'login_patient' %}">login</a>
+    
+{% endif %}
+
+    
+</body>
+
+
+
+</html>

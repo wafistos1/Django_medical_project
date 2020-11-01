@@ -13,7 +13,7 @@ class MyBackend(BaseBackend):
         # Check the token and return a user.
             patient = PatientUser.objects.get(identifier=identifier)
         except User.DoesNotExist:
-            messages.add_message(request,ERROR , f'Pas de patient avec cette Id')
+            messages.add_message(request,ERROR , f'Password or Id error')
             return redirect('login_patient')
         
         if patient is not None and patient.user.check_password(password):

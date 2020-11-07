@@ -55,6 +55,7 @@ def register_view(request):
 
 class LoginView(View):
     def get(self, request):
+        
         form = LoginForm()
         context = {
             'form': form,
@@ -69,15 +70,17 @@ class LoginView(View):
             user = authenticate(identifier=identifier, password = password)
         except:
             messages.add_message(request,ERROR , f'Password or Id error')
+            print('password ou id error ')
             return redirect('login_patient')
         if user:
             login(request, user)
             return redirect('home_patient')
-        
+        else:
+            messages.add_message(request,ERROR , f'Password or Id error')
+            
         context = {
             'form': form,
         }
-        
         return render(request, "patient/login_patient.html", context)
     
 
@@ -85,3 +88,6 @@ class LoginView(View):
 def logout_patient(request):
     logout(request)
     return redirect('home_patient')
+
+def static_view(request):
+    return render(request, 'patient/static_view.html')

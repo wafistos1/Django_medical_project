@@ -1,0 +1,82 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html>
+
+
+  <head>
+    <title>{% block title %} Formulaire des informations de santé  {% endblock title %} </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </head>
+
+
+<body>
+  {% block navbar %}
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand glyphicon glyphicon-home 
+" href="#"></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="dashboardPatient.html"><span class="glyphicon glyphicon-dashboard"></span> Dashboard</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="dashboardMedecin.html">
+            <span class="glyphicon glyphicon-list-alt"></span> Formulaires<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="formulaire.html?poids=&tour_de_taille_en_centimetre=&frequence_cardiaque_par_minute=&tension_arterielle_systolique_matin=&tension_arterielle_systolique_soir=&tension_arterielle_diastolique_matin=&tension_arterielle_diastolique_soir=&description_symptome_cardiovasculaire=++++++++++++&nombre_medicament=&description_effet_secondaire=++++++++++++&nombre_de_repas_par_jour=&quantite_eau_bu=&quantite_alcool_bu=&activite_physique_nature=++++++++++++&activite_physique_duree=&palpitations_horaire=&palpitations_duree=&douleur_thoracique_horaire=&douleur_thoracique_duree=&malaise_horaire=&malaise_duree=&natremie=&potassium=&creatinine=&clairance_de_la_creatinine_mdrd=&ntprobnp=&fer_serique=&taux_hemoglobine=&vs=&crp=&troponine=&taux_vitamine_d=&taux_acide_urique=&ntprobnp=&browser=s#">Informations de santé générales (Formulaire quotidien)</a></li>
+            <li><a href="formulaireEvaluationStress.html">Évaluation du niveau de stress (Toutes les 2 semaines)</a></li>
+            <li><a href="recapitulatifDesFormulairesRemplis.html">Récapitulatif des formulaires remplis</a></li>
+          </ul>
+        </li>
+        <li>
+            {% if user.is_authenticated %}
+          <a href="{% url 'details_patient' id=user.patient.id %}">
+              {% endif %}
+            <span class="glyphicon glyphicon-wrench"></span> Paramètres</span></a>
+          </ul>
+        </li>
+      </ul>
+      
+      <ul class="nav navbar-nav navbar-right">
+        {% if user.is_authenticated %}
+        
+        <li><a href="{% url 'logout_patient' %}"><span class="glyphicon glyphicon-log-out"></span> Déconnexion</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-user"></span> {{ user.patient.identifier }}</a></li>
+        
+        {% else %}
+        
+
+        <li><a href="{% url 'home_patient' %}"><span class="glyphicon glyphicon-log-out"></span> Connexion</a></li>
+        {% endif %}
+      </ul>
+    </div>
+  </div>
+</nav>
+ {% endblock navbar %}
+
+ {% block content %}
+  
+
+{% endblock content %}
+
+{% block scriptblock %}
+<script>
+ 
+</script>
+{% endblock scriptblock %}
+
+</body>
+</html>

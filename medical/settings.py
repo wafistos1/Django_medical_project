@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 
 from pathlib import Path
 import os
-import dj_database_url
+# import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -49,6 +49,8 @@ INSTALLED_APPS = [
     #Local
     'accounts',
     'patient',
+    'doctor',
+    'admin_app',
 ]
 
 SITE_ID = 1
@@ -109,6 +111,8 @@ AUTHENTICATION_BACKENDS = [
 
     # `allauth` specific authentication methods, such as login by e-mail
     'allauth.account.auth_backends.AuthenticationBackend',
+    #costum user need identifier for connexion
+    'patient.backends.MyBackendDoc',
     'patient.backends.MyBackend',
     
 ]
@@ -165,5 +169,5 @@ LOGIN_REDIRECT_URL = 'home'
 LOGIN_URL = 'login_view'
 # AUTH_USER_MODEL = 'accounts.CostumUser' 
 
-db_from_env = dj_database_url.config(conn_max_age=500)
-DATABASES['default'].update(db_from_env)
+# db_from_env = dj_database_url.config(conn_max_age=500)
+# DATABASES['default'].update(db_from_env)

@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Dashboard par patient</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  </head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand glyphicon glyphicon-home 
+" href="#"></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+            <span class="glyphicon glyphicon-dashboard"></span> Dashboards<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li>
+              <a href="dashboardMedecin.html">Dashboard global</a>
+            </li>
+            <li>
+              <a href="dashboardParPatient.html">Dashboard par patient</a>
+            </li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+            <span class="glyphicon glyphicon-list-alt"></span> Formulaires<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li>
+              <a href="formulaireInformationGeneraleMedecin.html">Formulaire des informations générales</a>
+            </li>
+            <li>
+              <a href="formulaireEvaluationStressMedecin.html">Formulaire d'évaluation du niveau de stress</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="compteDesPatients.html">
+            <span class="glyphicon glyphicon-user"></span> Compte des patients</span></a>
+        </li>
+        <li>
+          <a href="parametreMedecin.html">
+            <span class="glyphicon glyphicon-wrench"></span> Paramètres</span></a>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-log-out"></span> Déconnexion</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="row">
+  <h1 class="col-xs-12 text-center">
+    <b><span class="glyphicon glyphicon-list-alt"></span> Dashboard</b> des patients
+  </h1>
+
+  <div class="col-xs-offset-1 col-xs-10">
+    <iframe width="100%" height="1600" src="https://datastudio.google.com/embed/reporting/1d0b6d96-280b-4dad-b45a-cf1bdd595d56/page/1M" frameborder="0" style="border:0" allowfullscreen></iframe>
+    <br><br><br><br>
+  </div>
+
+  <div class="col-sm-offset-1 col-sm-5">
+    <h2 class="text-center">
+    Récapitulatif général des informations de santé 
+    </h2>
+    <div class="text-center">
+      <a href="#">
+        <button type="button" class="btn btn-warning">Mettre à jour les informations de santé</button>
+      </a>
+    </div><br>
+
+    <table class="table">
+      <thead>
+        <tr class="active">
+          <th>Élement</th>
+          <th>Valeur</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Poids</td>
+          <td>XXXXXX</td>
+        </tr>      
+        <tr>
+          <td>Tour de taille en cm</td>
+          <td>XXXXXX</td>
+        </tr>
+        <tr>
+          <td>Fréquence cardiaque par minute</td>
+          <td>XXXXXX</td>
+        </tr>
+        <tr>
+          <td>Tension artérielle systolique (prise du matin)</td>
+          <td>XXXXXX</td>
+        </tr>
+        <tr>
+          <td>Tension artérielle systolique (prise du soir) : </td>
+          <td>XXXXXX</td>
+        </tr>
+        <tr>
+          <td>Tension artérielle diastolique (prise du matin)</td>
+          <td>XXXXXX</td>
+        </tr>
+        <tr>
+          <td>Tension artérielle diastolique (prise du soir)</td>
+          <td>XXXXXX</td>
+        </tr>
+        <tr>
+          <td>Décrivez vos symptomes cardiovasculaires en quelques mots (malaise, perte de connaissance…)</td>
+          <td>XXXXXX</td>
+        </tr>
+        <tr>
+          <td>Nombre de médicaments pris dans la journée</td>
+          <td>XXXXXX</td>
+        </tr>
+        <tr>
+          <td>Oublie de prendre le(s) médicament(s) le matin</td>
+          <td>XXXXXX</td>
+        </tr>
+        <tr>
+          <td>Oublie de prendre le(s) médicament(s) le soir</td>
+          <td>XXXXXX</td>
+        </tr>
+        <tr>
+          <td>Effet(s) secondaire(s) remarqué(s)</td>
+          <td>XXXXXX</td>
+        </tr>
+        <tr>
+          <td>Symptôme(s) particulier(s) remarqué(s)</td>
+          <td>XXXXXX</td>
+        </tr>
+        <tr>
+          <td>Décrivez vos effets secondaires et/ou symptomes particuliers remarqués en quelques mots</td>
+          <td>XXXXXX</td>
+        </tr>
+        <tr>
+          <td>Consommation d'alcool</td>
+          <td>XXXXXX</td>
+        </tr>
+        <tr>
+          <td>Grignotage sucré</td>
+          <td>XXXXXX</td>
+        </tr>
+        <tr>
+          <td>Grignotage salé</td>
+          <td>XXXXXX</td>
+        </tr>
+        <tr>
+          <td>Nombre de repas pris durant la journée</td>
+          <td>XXXXXX</td>
+        </tr>
+        <tr>
+          <td>Quantité d'eau bu (en litre)</td>
+          <td>XXXXXX</td>
+        </tr>
+        <tr>
+          <td>Quantité d'alcool consommé (en litre)</td>
+          <td>XXXXXX</td>
+        </tr>
+        <tr>
+          <td>J'ai eu une activité physique aujourd'hui</td>
+          <td>XXXXXX</td>
+        </tr>
+        <tr>
+          <td>Décrivez la nature de votre activité physique</td>
+          <td>XXXXXX</td>
+        </tr>
+        <tr>
+          <td>Durée de l'activité physique en minute</td>
+          <td>XXXXXX</td>
+        </tr>
+        <tr>
+          <td>Durée de l'activité physique en minute</td>
+          <td>XXXXXX</td>
+        </tr>
+        <tr>
+          <td>Présence de dyspnée</td>
+          <td>XXXXXX</td>
+        </tr>
+        <tr>
+          <td>Présence d'œdème</td>
+          <td>XXXXXX</td>
+        </tr>
+        <tr>
+          <td>Présence d'épisode(s) infectieux</td>
+          <td>XXXXXX</td>
+        </tr>
+        <tr>
+          <td>Présence de fièvre</td>
+          <td>XXXXXX</td>
+        </tr>
+        <tr>
+          <td>Présence de palpitation</td>
+          <td>XXXXXX</td>
+        </tr>
+        <tr>
+          <td>Présence de douleur thoracique</td>
+          <td>XXXXXX</td>
+        </tr>
+        <tr>
+          <td>Présence de malaise</td>
+          <td>XXXXXX</td>
+        </tr>
+        <tr>
+          <td>Indiquez l'heure de début des palpitations</td>
+          <td>XXXXXX</td>
+        </tr>
+        <tr>
+          <td>Indiquez la durée total des palpitations apparues durant la journée en minute</td>
+          <td>XXXXXX</td>
+        </tr>
+        <tr>
+          <td>Indiquez l'heure de début des douleurs thoraciques</td>
+          <td>XXXXXX</td>
+        </tr>
+        <tr>
+          <td>Indiquez la durée total des douleurs thoraciques apparues durant la journée en minute</td>
+          <td>XXXXXX</td>
+        </tr>
+        <tr>
+          <td>Indiquez l'heure de début des malaises</td>
+          <td>XXXXXX</td>
+        </tr>
+        <tr>
+          <td>Indiquez la durée total des douleurs thoraciques apparues durant la journée en minute</td>
+          <td>XXXXXX</td>
+        </tr>
+        <tr>
+          <td>Présence de dyspnée</td>
+          <td>XXXXXX</td>
+        </tr>
+        <tr>
+          <td>Présence d'œdème</td>
+          <td>XXXXXX</td>
+        </tr>
+        <tr>
+          <td>Présence d'épisode(s) infectieux</td>
+          <td>XXXXXX</td>
+        </tr>
+        <tr>
+          <td>Présence de fièvre</td>
+          <td>XXXXXX</td>
+        </tr>
+        <tr>
+          <td>Présence de palpitation</td>
+          <td>XXXXXX</td>
+        </tr>
+        <tr>
+          <td>Présence de douleur thoracique</td>
+          <td>XXXXXX</td>
+        </tr>
+        <tr>
+          <td>Présence de malaise</td>
+          <td>XXXXXX</td>
+        </tr>
+        <tr>
+          <td>Indiquez l'heure de début des palpitations</td>
+          <td>XXXXXX</td>
+        </tr>
+        <tr>
+          <td>Indiquez la durée total des palpitations apparues durant la journée en minute</td>
+          <td>XXXXXX</td>
+        </tr>
+        <tr>
+          <td>Indiquez l'heure de début des douleurs thoraciques</td>
+          <td>XXXXXX</td>
+        </tr>
+        <tr>
+          <td>Indiquez la durée total des douleurs thoraciques apparues durant la journée en minute</td>
+          <td>XXXXXX</td>
+        </tr>
+        <tr>
+          <td>Indiquez l'heure de début des malaises</td>
+          <td>XXXXXX</td>
+        </tr>
+        <tr>
+          <td>Indiquez la durée total des douleurs thoraciques apparues durant la journée en minute</td>
+          <td>XXXXXX</td>
+        </tr>
+        <tr>
+          <td>Indiquez vos valeurs de natremie en mmol/l (millimoles par litre)</td>
+          <td>XXXXXX</td>
+        </tr>
+        <tr>
+          <td>Indiquez vos valeurs de potassium en mmol/l (millimoles par litre)</td>
+          <td>XXXXXX</td>
+        </tr>
+        <tr>
+          <td>Indiquez vos valeurs de créatinine en μmol/l (micromoles par litre)</td>
+          <td>XXXXXX</td>
+        </tr>
+        <tr>
+          <td>Indiquez vos valeurs de clairance de créatinine en ml/m (millilitres par minutes)</td>
+          <td>XXXXXX</td>
+        </tr>
+        <tr>
+          <td>Indiquez votre taux de NT Probnp en ng/l (nanogrammes par litre)</td>
+          <td>XXXXXX</td>
+        </tr>
+        <tr>
+          <td>Indiquez votre taux de fer sérique mg/l (milligrame par litre)</td>
+          <td>XXXXXX</td>
+        </tr>
+        <tr>
+          <td>Indiquez votre taux d'hémoglobine en g/100 ml (gramme par 100 millilitre)</td>
+          <td>XXXXXX</td>
+        </tr>
+        <tr>
+          <td>Indiquez vos valeurs de Vitesse de sédimentation (VS) en milimètre</td>
+          <td>XXXXXX</td>
+        </tr>
+        <tr>
+          <td>Indiquez votre taux protéine C réactive en mg/l</td>
+          <td>XXXXXX</td>
+        </tr>
+        <tr>
+          <td>Indiquez votre taux de troponine en μg/l (microgrammes par litre)</td>
+          <td>XXXXXX</td>
+        </tr>
+        <tr>
+          <td>Indiquez votre taux de vitamine D en ng/ml de sang</td>
+          <td>XXXXXX</td>
+        </tr>
+        <tr>
+          <td>Indiquez votre taux d'acide urique en mg/l</td>
+          <td>XXXXXX</td>
+        </tr>
+        <tr>
+          <td>Indiquez votre taux de INR (International Normalized Ratio)</td>
+          <td>XXXXXX</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="col-sm-5">
+    <h2 class="text-center">
+    Informations d'évaluation du niveau de stress
+  </h2>
+  <div class="text-center">
+    <a href="#">
+      <button type="button" class="btn btn-warning">Mettre à jour les informations d'évaluation du niveau de stress</button>
+    </a>
+  </div><br>
+    <table class="table">
+      <thead>
+        <tr class="active">
+          <th>Élement</th>
+          <th>Valeur</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Irritabilité</td>
+          <td>XXXXXX</td>
+        </tr>      
+        <tr>
+          <td>Sentiments dépressifs</td>
+          <td>XXXXXX</td>
+        </tr>
+        <tr>
+          <td>Bouche sèche ou gorge sèche</td>
+          <td>XXXXXX</td>
+        </tr>
+        <tr>
+          <td>Actions ou gestes impulsifs</td>
+          <td>XXXXXX</td>
+        </tr>
+        <tr>
+          <td>Grincement des dents</td>
+          <td>XXXXXX</td>
+        </tr>
+        <tr>
+          <td>Difficulté à rester assis</td>
+          <td>XXXXXX</td>
+        </tr>
+        <tr>
+          <td>Cauchemars</td>
+          <td>XXXXXX</td>
+        </tr>
+        <tr>
+          <td>Diarrhée</td>
+          <td>XXXXXX</td>
+        </tr>
+        <tr>
+          <td>Attaques verbales envers quelqu’un</td>
+          <td>XXXXXX</td>
+        </tr>
+        <tr>
+          <td>Hauts et bas émotifs</td>
+          <td>XXXXXX</td>
+        </tr>
+        <tr>
+          <td>Grande envie de pleurer</td>
+          <td>XXXXXX</td>
+        </tr>
+        <tr>
+          <td>Grande envie de fuir</td>
+          <td>XXXXXX</td>
+        </tr>
+        <tr>
+          <td>Grande envie de faire mal</td>
+          <td>XXXXXX</td>
+        </tr>
+        <tr>
+          <td>Pensées embrouillées</td>
+          <td>XXXXXX</td>
+        </tr>
+        <tr>
+          <td>Débit plus rapide</td>
+          <td>XXXXXX</td>
+        </tr>
+        <tr>
+          <td>Fatigue ou lourdeur généralisées</td>
+          <td>XXXXXX</td>
+        </tr>
+        <tr>
+          <td>Sentiment d’être surchargé(e)</td>
+          <td>XXXXXX</td>
+        </tr>
+        <tr>
+          <td>Sentiment d’être émotivement fragile</td>
+          <td>XXXXXX</td>
+        </tr>
+        <tr>
+          <td>Sentiment de tristesse</td>
+          <td>XXXXXX</td>
+        </tr>
+        <tr>
+          <td>Sentiment d’anxiété</td>
+          <td>XXXXXX</td>
+        </tr>
+        <tr>
+          <td>Tension émotionnelle</td>
+          <td>XXXXXX</td>
+        </tr>
+        <tr>
+          <td>Hostilité envers les autres</td>
+          <td>XXXXXX</td>
+        </tr>
+        <tr>
+          <td>Tremblements ou gestes nerveux</td>
+          <td>XXXXXX</td>
+        </tr>
+        <tr>
+          <td>Sentiment d’être surchargé(e)</td>
+          <td>XXXXXX</td>
+        </tr>
+        <tr>
+          <td>Bégaiements ou hésitations verbales</td>
+          <td>XXXXXX</td>
+        </tr>
+        <tr>
+          <td>Incapacité ou difficulté à se concentrer</td>
+          <td>XXXXXX</td>
+        </tr>
+        <tr>
+          <td>Difficulté à organiser ses pensées</td>
+          <td>XXXXXX</td>
+        </tr>
+        <tr>
+          <td>Difficulté à dormir toute la nuit sans se réveiller</td>
+          <td>XXXXXX</td>
+        </tr>
+        <tr>
+          <td>Besoin fréquent d’uriner</td>
+          <td>XXXXXX</td>
+        </tr>
+        <tr>
+          <td>Maux d’estomac ou difficultés à digérer</td>
+          <td>XXXXXX</td>
+        </tr>
+        <tr>
+          <td>Geste ou sentiment d’impatience</td>
+          <td>XXXXXX</td>
+        </tr>
+        <tr>
+          <td>Maux de tête</td>
+          <td>XXXXXX</td>
+        </tr>
+        <tr>
+          <td>Douleurs au dos ou à la nuque</td>
+          <td>XXXXXX</td>
+        </tr>
+        <tr>
+          <td>Perte ou gain d’appétit</td>
+          <td>XXXXXX</td>
+        </tr>
+        <tr>
+          <td>Perte d’intérêt pour le sexe</td>
+          <td>XXXXXX</td>
+        </tr>
+        <tr>
+          <td>Oublis fréquents</td>
+          <td>XXXXXX</td>
+        </tr>
+        <tr>
+          <td>Douleurs ou serrements à la poitrine</td>
+          <td>XXXXXX</td>
+        </tr>
+        <tr>
+          <td>Conflits significatifs avec les autres</td>
+          <td>XXXXXX</td>
+        </tr>
+        <tr>
+          <td>Difficulté à se lever après le sommeil</td>
+          <td>XXXXXX</td>
+        </tr>
+        <tr>
+          <td>Sentiment que les choses sont hors de contrôle</td>
+          <td>XXXXXX</td>
+        </tr>
+        <tr>
+          <td>Difficulté à faire une longue activité continue</td>
+          <td>XXXXXX</td>
+        </tr>
+        <tr>
+          <td>Mouvements de retrait, d’isolement</td>
+          <td>XXXXXX</td>
+        </tr>
+        <tr>
+          <td>Difficulté à s’endormir</td>
+          <td>XXXXXX</td>
+        </tr>
+        <tr>
+          <td>Difficulté à se remettre d’un événement contrariant</td>
+          <td>XXXXXX</td>
+        </tr>
+        <tr>
+          <td>Mains moites</td>
+          <td>XXXXXX</td>
+        </tr>
+        <tr>
+          <td>Total de l’impact du stress dans votre vie actuelle</td>
+          <td>XXXXXX</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>
+<br><br><br>
+<script>
+  var d = new Date();
+  document.getElementById("jour").innerHTML = ["Dimanche","Lundi","Mardi","Mercredi","Jeudi","Vendredi","Samedi"][d.getDay()];
+  document.getElementById("journumber").innerHTML = d.getDate();
+  document.getElementById("mois").innerHTML = ["Janvier","Février","Mars","Avril","Mai","Juin","Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre"][d.getMonth()];
+  document.getElementById("annee").innerHTML = d.getFullYear();
+</script>
+
+</body>
+</html>

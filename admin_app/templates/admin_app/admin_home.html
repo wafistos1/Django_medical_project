@@ -1,0 +1,116 @@
+{% extends 'base2.html' %}
+
+{% block title %}
+<title>Ajouter un patient </title>
+{% endblock title %}
+
+{% block content %}
+
+
+
+
+<body style="background-image:url('images/medecin.jpg');background-repeat: no-repeat; background-size: auto;">
+
+    <div class="container-fluid">
+        <div class="row" style="position: absolute; top: 20%;">
+            <div class="col-md-12" >
+                <div class="col-md-12 text-center">
+                    <h2>
+                        BIENVENUE SUR LE SITE DE SUIVI PERSONNEL DE KEANNOU.NET
+                    </h2><br>
+
+                    <h2>
+                        LISTE DU PERSONNELS
+                    </h2><br>
+                </div>
+                {% if request.user.is_authenticated %}
+
+                <div class="col-md-8 col-xs-offset-2 col-xs-8 text-center">
+                    {% if messages %}
+                    <div class="col-md-12 text-center">
+                        <ul class="messages">
+                            {% for message in messages %}
+                            <li {% if message.tags %} class="alert alert-{{ message.tags }}" {% endif %}>{{ message }}
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+
+                    {% endif %}
+
+                    <table class="table">
+                        <thead>
+                            <tr class="active">
+                                <th>
+                                    Identifiant
+                                </th>
+                                <th>
+                                    Username
+                                </th>
+                                <th>
+                                    Email
+                                </th>
+                                <th>
+                                    Date de création
+                                </th>
+                                <th>
+                                    Action
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for doctor in doctors %}
+                            <tr class="active">
+                                <td>{{doctor.identifier}}</td>
+                                <td>{{doctor.user.username}}</td>
+                                <td>{{doctor.user.email }}</td>
+                                <td>{{doctor.user.date_joined|date:"D d M Y" }}</td>
+                                <td>
+                                    <a type="button" href="{{ doctor.get_delete_model_url }}"
+                                        class="btn btn-danger">Supprimer</a>
+                                    <button type="button" class="btn btn-danger" data-toggle="modal"
+                                        data-target="#{{ doctor.identifier }}Modal">
+                                        Supprimer
+                                    </button>
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="{{ doctor.identifier }}Modal" tabindex="-1"
+                                        role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="{{ doctor.identifier }}Modal">Supprimer
+                                                        le compte N: {{ doctor.identifier }} </h5>
+                                                    <button type="button" class="close" data-dismiss="modal"
+                                                        aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <h3>Confirmer la suppression du compte</h3>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary"
+                                                        data-dismiss="modal">Annuler</button>
+                                                    <a type="button" href="{{ doctor.get_delete_model_url }}"
+                                                        class="btn btn-danger">Confirmer</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- fin du modal -->
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+
+                {% else %}
+                Vous devez etre un admin systeme
+                {% endif %}
+            </div>
+        </div>
+    
+
+
+    {% endblock content  %}

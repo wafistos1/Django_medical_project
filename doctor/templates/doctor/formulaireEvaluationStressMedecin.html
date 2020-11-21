@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Formulaire d'évaluation du niveau de stress</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand glyphicon glyphicon-home 
+" href="#"></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+            <span class="glyphicon glyphicon-dashboard"></span> Dashboards<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li>
+              <a href="dashboardMedecin.html">Dashboard global</a>
+            </li>
+            <li>
+              <a href="dashboardParPatient.html">Dashboard par patient</a>
+            </li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+            <span class="glyphicon glyphicon-list-alt"></span> Formulaires<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li>
+              <a href="formulaireInformationGeneraleMedecin.html">Formulaire des informations générales</a>
+            </li>
+            <li>
+              <a href="formulaireEvaluationStressMedecin.html">Formulaire d'évaluation du niveau de stress</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="compteDesPatients.html">
+            <span class="glyphicon glyphicon-user"></span> Compte des patients</span></a>
+        </li>
+        <li>
+          <a href="parametreMedecin.html">
+            <span class="glyphicon glyphicon-wrench"></span> Paramètres</span></a>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-log-out"></span> Déconnexion</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  <div class="container">
+    <div class="row">
+        
+      <h1 class="text-center">
+        <b><span class="glyphicon glyphicon-list-alt"></span> Formulaires</b> à renseigner toutes les deux semaines<br>
+        Date du dernier envoie du formulaire : XXXX
+      </h1>
+      
+      <div class="col-xs-offset-2 col-xs-8">
+        <form action="">
+            <h2>Évaluation du niveau de stress</h2>
+            <p>
+              La grille d’évaluation de la page suivante permet de déterminer le niveau de stress accumulé selon les événements vécus au
+              cours des deux semaines précédentes. Remplir cette grille vous permettra de prendre conscience de votre niveau de stress
+              et, par conséquent, d’agir sur celui-ci. Il est intéressant d’effectuer ce test en début de session et à nouveau en période
+              d’examen afin de pouvoir comparer les résultats et déterminer ce qui est stressant pour vous. Vous apprendrez ainsi à mieux
+              vous connaître et à trouver des stratégies d’adaptation en conséquence.<br><br>
+              <strong>Échelle d’évaluation des symptômes du stress</strong><br>
+              Remplissez la grille de la page suivante en indiquant la fréquence avec laquelle vous avez ressenti ou vécu, au cours des
+              deux dernières semaines, les symptômes décrits. Additionnez les valeurs que vous avez attribuées pour chaque symptôme
+              afin de déterminer l’impact du stress dans votre vie actuelle.
+              </p>
+              <table class="table">
+                <thead>
+                  <tr class="active">
+                    <th>Valeurs</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="active">
+                    <td>0</td>
+                    <td>Ce symptôme n’est pas apparu au cours des deux dernières semaines</td>
+                  </tr>      
+                  <tr class="active">
+                    <td>1</td>
+                    <td>Ce symptôme est apparu une ou deux fois seulement au cours des deux dernières semaines</td>
+                  </tr>
+                  <tr class="active">
+                    <td>5</td>
+                    <td>Ce symptôme est apparu plusieurs fois au cours des deux dernières semaines</td>
+                  </tr>
+                  <tr class="active">
+                    <td>10</td>
+                    <td>Ce symptôme est apparu presque continuellement au cours des deux dernières semaines</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <h4>Irritabilité</h4>
+              <input type="radio" id="irritabilite0" name="irritabilite" value=0>
+              <label for="irritabilite0">0</label>
+              
+              <input type="radio" id="irritabilite1" name="irritabilite" value=1>
+              <label for="irritabilite1">1</label>
+              
+              <input type="radio" id="irritabilite5" name="irritabilite" value=5>
+              <label for="irritabilite5">5</label>
+              
+              <input type="radio" id="irritabilite10" name="irritabilite" value=10>
+              <label for="irritabilite10">10</label>
+
+              <h4>Sentiments dépressifs</h4>
+              <input type="radio" id="sentiments_depressifs0" name="sentiments_depressifs" value=0>
+              <label for="sentiments_depressifs0">0</label>
+              
+              <input type="radio" id="sentiments_depressifs1" name="sentiments_depressifs" value=1>
+              <label for="sentiments_depressifs1">1</label>
+              
+              <input type="radio" id="sentiments_depressifs5" name="sentiments_depressifs" value=5>
+              <label for="sentiments_depressifs5">5</label>
+              
+              <input type="radio" id="sentiments_depressifs10" name="sentiments_depressifs" value=10>
+              <label for="sentiments_depressifs10">10</label>
+
+              <h4>Bouche sèche ou gorge sèche</h4>
+              <input type="radio" id="bouche_ou_gorge_seche0" name="bouche_ou_gorge_seche" value=0>
+              <label for="bouche_ou_gorge_seche0">0</label>
+              
+              <input type="radio" id="bouche_ou_gorge_seche1" name="bouche_ou_gorge_seche" value=1>
+              <label for="bouche_ou_gorge_seche1">1</label>
+              
+              <input type="radio" id="bouche_ou_gorge_seche5" name="bouche_ou_gorge_seche" value=5>
+              <label for="bouche_ou_gorge_seche5">5</label>
+              
+              <input type="radio" id="bouche_ou_gorge_seche10" name="bouche_ou_gorge_seche" value=10>
+              <label for="bouche_ou_gorge_seche10">10</label>
+
+              <h4>Actions ou gestes impulsifs</h4>
+              <input type="radio" id="actions_ou_gestes_impulsifs0" name="actions_ou_gestes_impulsifs" value=0>
+              <label for="actions_ou_gestes_impulsifs0">0</label>
+              
+              <input type="radio" id="actions_ou_gestes_impulsifs1" name="actions_ou_gestes_impulsifs" value=1>
+              <label for="actions_ou_gestes_impulsifs1">1</label>
+              
+              <input type="radio" id="actions_ou_gestes_impulsifs5" name="actions_ou_gestes_impulsifs" value=5>
+              <label for="actions_ou_gestes_impulsifs5">5</label>
+              
+              <input type="radio" id="actions_ou_gestes_impulsifs10" name="actions_ou_gestes_impulsifs" value=10>
+              <label for="actions_ou_gestes_impulsifs10">10</label>
+              
+              <h4>Grincement des dents</h4>
+              <input type="radio" id="grincement_des_dents0" name="grincement_des_dents" value=0>
+              <label for="grincement_des_dents0">0</label>
+              
+              <input type="radio" id="grincement_des_dents1" name="grincement_des_dents" value=1>
+              <label for="grincement_des_dents1">1</label>
+              
+              <input type="radio" id="grincement_des_dents5" name="grincement_des_dents" value=5>
+              <label for="grincement_des_dents5">5</label>
+              
+              <input type="radio" id="grincement_des_dents10" name="grincement_des_dents" value=10>
+              <label for="grincement_des_dents10">10</label>
+              
+              <h4>Difficulté à rester assis</h4>
+              <input type="radio" id="difficultes_a_rester_assis0" name="difficultes_a_rester_assis" value=0>
+              <label for="difficultes_a_rester_assis0">0</label>
+              
+              <input type="radio" id="difficultes_a_rester_assis1" name="difficultes_a_rester_assis" value=1>
+              <label for="difficultes_a_rester_assis1">1</label>
+              
+              <input type="radio" id="difficultes_a_rester_assis5" name="difficultes_a_rester_assis" value=5>
+              <label for="difficultes_a_rester_assis5">5</label>
+              
+              <input type="radio" id="difficultes_a_rester_assis10" name="difficultes_a_rester_assis" value=10>
+              <label for="difficultes_a_rester_assis10">10</label>
+              
+              <h4>Cauchemars</h4>
+              <input type="radio" id="cauchemars0" name="cauchemars" value=0>
+              <label for="cauchemars0">0</label>
+              
+              <input type="radio" id="cauchemars1" name="cauchemars" value=1>
+              <label for="cauchemars1">1</label>
+              
+              <input type="radio" id="cauchemars5" name="cauchemars" value=5>
+              <label for="cauchemars5">5</label>
+              
+              <input type="radio" id="cauchemars10" name="cauchemars" value=10>
+              <label for="cauchemars10">10</label>
+              
+              <h4>Diarrhée</h4>
+              <input type="radio" id="diarrhee0" name="diarrhee" value=0>
+              <label for="diarrhee0">0</label>
+              
+              <input type="radio" id="diarrhee1" name="diarrhee" value=1>
+              <label for="diarrhee1">1</label>
+              
+              <input type="radio" id="diarrhee5" name="diarrhee" value=5>
+              <label for="diarrhee5">5</label>
+              
+              <input type="radio" id="diarrhee10" name="diarrhee" value=10>
+              <label for="diarrhee10">10</label>
+              
+              <h4>Attaques verbales envers quelqu’un</h4>
+              <input type="radio" id="attaques_verbales_envers_quelquun0" name="attaques_verbales_envers_quelquun" value=0>
+              <label for="attaques_verbales_envers_quelquun0">0</label>
+              
+              <input type="radio" id="attaques_verbales_envers_quelquun1" name="attaques_verbales_envers_quelquun" value=1>
+              <label for="attaques_verbales_envers_quelquun1">1</label>
+              
+              <input type="radio" id="attaques_verbales_envers_quelquun5" name="attaques_verbales_envers_quelquun" value=5>
+              <label for="attaques_verbales_envers_quelquun5">5</label>
+              
+              <input type="radio" id="attaques_verbales_envers_quelquun10" name="attaques_verbales_envers_quelquun" value=10>
+              <label for="attaques_verbales_envers_quelquun10">10</label>
+              
+              <h4>Hauts et bas émotifs</h4>
+              <input type="radio" id="hauts_et_bas_emotifs0" name="hauts_et_bas_emotifs" value=0>
+              <label for="hauts_et_bas_emotifs0">0</label>
+              
+              <input type="radio" id="hauts_et_bas_emotifs1" name="hauts_et_bas_emotifs" value=1>
+              <label for="hauts_et_bas_emotifs1">1</label>
+              
+              <input type="radio" id="hauts_et_bas_emotifs5" name="hauts_et_bas_emotifs" value=5>
+              <label for="hauts_et_bas_emotifs5">5</label>
+              
+              <input type="radio" id="hauts_et_bas_emotifs10" name="hauts_et_bas_emotifs" value=10>
+              <label for="hauts_et_bas_emotifs10">10</label>
+              
+              <h4>Grande envie de pleurer</h4>
+              <input type="radio" id="grande_envie_de_pleurer0" name="grande_envie_de_pleurer" value=0>
+              <label for="grande_envie_de_pleurer0">0</label>
+              
+              <input type="radio" id="grande_envie_de_pleurer1" name="grande_envie_de_pleurer" value=1>
+              <label for="grande_envie_de_pleurer1">1</label>
+              
+              <input type="radio" id="grande_envie_de_pleurer5" name="grande_envie_de_pleurer" value=5>
+              <label for="grande_envie_de_pleurer5">5</label>
+              
+              <input type="radio" id="grande_envie_de_pleurer10" name="grande_envie_de_pleurer" value=10>
+              <label for="grande_envie_de_pleurer10">10</label>
+              
+              <h4>Grande envie de fuir</h4>
+              <input type="radio" id="grande_envie_de_fuir0" name="grande_envie_de_fuir" value=0>
+              <label for="grande_envie_de_fuir0">0</label>
+              
+              <input type="radio" id="grande_envie_de_fuir1" name="grande_envie_de_fuir" value=1>
+              <label for="grande_envie_de_fuir1">1</label>
+              
+              <input type="radio" id="grande_envie_de_fuir5" name="grande_envie_de_fuir" value=5>
+              <label for="grande_envie_de_fuir5">5</label>
+              
+              <input type="radio" id="grande_envie_de_fuir10" name="grande_envie_de_fuir" value=10>
+              <label for="grande_envie_de_fuir10">10</label>
+              
+              <h4>Grande envie de faire mal</h4>
+              <input type="radio" id="grande_envie_de_faire_mal0" name="grande_envie_de_faire_mal" value=0>
+              <label for="grande_envie_de_faire_mal0">0</label>
+              
+              <input type="radio" id="grande_envie_de_faire_mal1" name="grande_envie_de_faire_mal" value=1>
+              <label for="grande_envie_de_faire_mal1">1</label>
+              
+              <input type="radio" id="grande_envie_de_faire_mal5" name="grande_envie_de_faire_mal" value=5>
+              <label for="grande_envie_de_faire_mal5">5</label>
+              
+              <input type="radio" id="grande_envie_de_faire_mal10" name="grande_envie_de_faire_mal" value=10>
+              <label for="grande_envie_de_faire_mal10">10</label>
+              
+              <h4>Pensées embrouillées</h4>
+              <input type="radio" id="pensees_embrouillees0" name="pensees_embrouillees" value=0>
+              <label for="pensees_embrouillees0">0</label>
+              
+              <input type="radio" id="pensees_embrouillees1" name="pensees_embrouillees" value=1>
+              <label for="pensees_embrouillees1">1</label>
+              
+              <input type="radio" id="pensees_embrouillees5" name="pensees_embrouillees" value=5>
+              <label for="pensees_embrouillees5">5</label>
+              
+              <input type="radio" id="pensees_embrouillees10" name="pensees_embrouillees" value=10>
+              <label for="pensees_embrouillees10">10</label>
+              
+              <h4>Débit plus rapide</h4>
+              <input type="radio" id="debit_plus_rapide0" name="debit_plus_rapide" value=0>
+              <label for="debit_plus_rapide0">0</label>
+              
+              <input type="radio" id="debit_plus_rapide1" name="debit_plus_rapide" value=1>
+              <label for="debit_plus_rapide1">1</label>
+              
+              <input type="radio" id="debit_plus_rapide5" name="debit_plus_rapide" value=5>
+              <label for="debit_plus_rapide5">5</label>
+              
+              <input type="radio" id="debit_plus_rapide10" name="debit_plus_rapide" value=10>
+              <label for="debit_plus_rapide10">10</label>
+              
+              <h4>Fatigue ou lourdeur généralisées</h4>
+              <input type="radio" id="fatigue_ou_lourdeur_generalisees0" name="fatigue_ou_lourdeur_generalisees" value=0>
+              <label for="fatigue_ou_lourdeur_generalisees0">0</label>
+              
+              <input type="radio" id="fatigue_ou_lourdeur_generalisees1" name="fatigue_ou_lourdeur_generalisees" value=1>
+              <label for="fatigue_ou_lourdeur_generalisees1">1</label>
+              
+              <input type="radio" id="fatigue_ou_lourdeur_generalisees5" name="fatigue_ou_lourdeur_generalisees" value=5>
+              <label for="fatigue_ou_lourdeur_generalisees5">5</label>
+              
+              <input type="radio" id="fatigue_ou_lourdeur_generalisees10" name="fatigue_ou_lourdeur_generalisees" value=10>
+              <label for="fatigue_ou_lourdeur_generalisees10">10</label>
+              
+              <h4>Sentiment d’être surchargé(e)</h4>
+              <input type="radio" id="sentiment_detre_surcharge0" name="sentiment_detre_surcharge" value=0>
+              <label for="sentiment_detre_surcharge0">0</label>
+              
+              <input type="radio" id="sentiment_detre_surcharge1" name="sentiment_detre_surcharge" value=1>
+              <label for="sentiment_detre_surcharge1">1</label>
+              
+              <input type="radio" id="sentiment_detre_surcharge5" name="sentiment_detre_surcharge" value=5>
+              <label for="sentiment_detre_surcharge5">5</label>
+              
+              <input type="radio" id="sentiment_detre_surcharge10" name="sentiment_detre_surcharge" value=10>
+              <label for="sentiment_detre_surcharge10">10</label>
+              
+              <h4>Sentiment d’être émotivement fragile</h4>
+              <input type="radio" id="sentiment_detre_emotivement_fragile0" name="sentiment_detre_emotivement_fragile" value=0>
+              <label for="sentiment_detre_emotivement_fragile0">0</label>
+              
+              <input type="radio" id="sentiment_detre_emotivement_fragile1" name="sentiment_detre_emotivement_fragile" value=1>
+              <label for="sentiment_detre_emotivement_fragile1">1</label>
+              
+              <input type="radio" id="sentiment_detre_emotivement_fragile5" name="sentiment_detre_emotivement_fragile" value=5>
+              <label for="sentiment_detre_emotivement_fragile5">5</label>
+              
+              <input type="radio" id="sentiment_detre_emotivement_fragile10" name="sentiment_detre_emotivement_fragile" value=10>
+              <label for="sentiment_detre_emotivement_fragile10">10</label>
+              
+              <h4>Sentiment de tristesse</h4>
+              <input type="radio" id="sentiment_de_tristesse0" name="sentiment_de_tristesse" value=0>
+              <label for="sentiment_de_tristesse0">0</label>
+              
+              <input type="radio" id="sentiment_de_tristesse1" name="sentiment_de_tristesse" value=1>
+              <label for="sentiment_de_tristesse1">1</label>
+              
+              <input type="radio" id="sentiment_de_tristesse5" name="sentiment_de_tristesse" value=5>
+              <label for="sentiment_de_tristesse5">5</label>
+              
+              <input type="radio" id="sentiment_de_tristesse10" name="sentiment_de_tristesse" value=10>
+              <label for="sentiment_de_tristesse10">10</label>
+              
+              <h4>Sentiment d’anxiété</h4>
+              <input type="radio" id="sentiment_danxiete0" name="sentiment_danxiete" value=0>
+              <label for="sentiment_danxiete0">0</label>
+              
+              <input type="radio" id="sentiment_danxiete1" name="sentiment_danxiete" value=1>
+              <label for="sentiment_danxiete1">1</label>
+              
+              <input type="radio" id="sentiment_danxiete5" name="sentiment_danxiete" value=5>
+              <label for="sentiment_danxiete5">5</label>
+              
+              <input type="radio" id="sentiment_danxiete10" name="sentiment_danxiete" value=10>
+              <label for="sentiment_danxiete10">10</label>
+              
+              <h4>Tension émotionnelle</h4>
+              <input type="radio" id="tension_emotionnelle0" name="tension_emotionnelle" value=0>
+              <label for="tension_emotionnelle0">0</label>
+              
+              <input type="radio" id="tension_emotionnelle1" name="tension_emotionnelle" value=1>
+              <label for="tension_emotionnelle1">1</label>
+              
+              <input type="radio" id="tension_emotionnelle5" name="tension_emotionnelle" value=5>
+              <label for="tension_emotionnelle5">5</label>
+              
+              <input type="radio" id="tension_emotionnelle10" name="tension_emotionnelle" value=10>
+              <label for="tension_emotionnelle10">10</label>
+              
+              <h4>Hostilité envers les autres</h4>
+              <input type="radio" id="hostilite_envers_les_autres0" name="hostilite_envers_les_autres" value=0>
+              <label for="hostilite_envers_les_autres0">0</label>
+              
+              <input type="radio" id="ihostilite_envers_les_autres1" name="hostilite_envers_les_autres" value=1>
+              <label for="hostilite_envers_les_autres1">1</label>
+              
+              <input type="radio" id="hostilite_envers_les_autres5" name="hostilite_envers_les_autres" value=5>
+              <label for="hostilite_envers_les_autres5">5</label>
+              
+              <input type="radio" id="hostilite_envers_les_autres10" name="hostilite_envers_les_autres" value=10>
+              <label for="hostilite_envers_les_autres10">10</label>
+              
+              <h4>Tremblements ou gestes nerveux</h4>
+              <input type="radio" id="tremblements_ou_gestes_nerveux0" name="tremblements_ou_gestes_nerveux" value=0>
+              <label for="tremblements_ou_gestes_nerveux0">0</label>
+              
+              <input type="radio" id="tremblements_ou_gestes_nerveux1" name="tremblements_ou_gestes_nerveux" value=1>
+              <label for="tremblements_ou_gestes_nerveux1">1</label>
+              
+              <input type="radio" id="tremblements_ou_gestes_nerveux5" name="tremblements_ou_gestes_nerveux" value=5>
+              <label for="tremblements_ou_gestes_nerveux5">5</label>
+              
+              <input type="radio" id="tremblements_ou_gestes_nerveux10" name="tremblements_ou_gestes_nerveux" value=10>
+              <label for="tremblements_ou_gestes_nerveux10">10</label>
+              
+              <h4>Bégaiements ou hésitations verbales</h4>
+              <input type="radio" id="begaiements_ou_hesitations_verbales0" name="begaiements_ou_hesitations_verbales" value=0>
+              <label for="begaiements_ou_hesitations_verbales0">0</label>
+              
+              <input type="radio" id="begaiements_ou_hesitations_verbales1" name="begaiements_ou_hesitations_verbales" value=1>
+              <label for="begaiements_ou_hesitations_verbales1">1</label>
+              
+              <input type="radio" id="begaiements_ou_hesitations_verbales5" name="begaiements_ou_hesitations_verbales" value=5>
+              <label for="begaiements_ou_hesitations_verbales5">5</label>
+              
+              <input type="radio" id="begaiements_ou_hesitations_verbales10" name="begaiements_ou_hesitations_verbales" value=10>
+              <label for="begaiements_ou_hesitations_verbales10">10</label>
+              
+              <h4>Incapacité ou difficulté à se concentrer</h4>
+              <input type="radio" id="incapacite_ou_difficultes_a_se_concentrer0" name="incapacite_ou_difficultes_a_se_concentrer" value=0>
+              <label for="incapacite_ou_difficultes_a_se_concentrer0">0</label>
+              
+              <input type="radio" id="incapacite_ou_difficultes_a_se_concentrer1" name="incapacite_ou_difficultes_a_se_concentrer" value=1>
+              <label for="incapacite_ou_difficultes_a_se_concentrer1">1</label>
+              
+              <input type="radio" id="incapacite_ou_difficultes_a_se_concentrer5" name="incapacite_ou_difficultes_a_se_concentrer" value=5>
+              <label for="incapacite_ou_difficultes_a_se_concentrer5">5</label>
+              
+              <input type="radio" id="incapacite_ou_difficultes_a_se_concentrer10" name="incapacite_ou_difficultes_a_se_concentrer" value=10>
+              <label for="incapacite_ou_difficultes_a_se_concentrer10">10</label>
+              
+              <h4>Difficulté à organiser ses pensées</h4>
+              <input type="radio" id="difficulte_a_organiser_ses_pensees0" name="difficulte_a_organiser_ses_pensees" value=0>
+              <label for="difficulte_a_organiser_ses_pensees0">0</label>
+              
+              <input type="radio" id="difficulte_a_organiser_ses_pensees1" name="difficulte_a_organiser_ses_pensees" value=1>
+              <label for="difficulte_a_organiser_ses_pensees1">1</label>
+              
+              <input type="radio" id="difficulte_a_organiser_ses_pensees5" name="difficulte_a_organiser_ses_pensees" value=5>
+              <label for="difficulte_a_organiser_ses_pensees5">5</label>
+              
+              <input type="radio" id="difficulte_a_organiser_ses_pensees10" name="difficulte_a_organiser_ses_pensees" value=10>
+              <label for="difficulte_a_organiser_ses_pensees10">10</label>
+              
+              <h4>Difficulté à dormir toute la nuit sans se réveiller</h4>
+              <input type="radio" id="difficulte_a_dormir_toute_la_nuit_sans_se_reveiller0" name="difficulte_a_dormir_toute_la_nuit_sans_se_reveiller" value=0>
+              <label for="difficulte_a_dormir_toute_la_nuit_sans_se_reveiller0">0</label>
+              
+              <input type="radio" id="difficulte_a_dormir_toute_la_nuit_sans_se_reveiller1" name="difficulte_a_dormir_toute_la_nuit_sans_se_reveiller" value=1>
+              <label for="difficulte_a_dormir_toute_la_nuit_sans_se_reveiller1">1</label>
+              
+              <input type="radio" id="difficulte_a_dormir_toute_la_nuit_sans_se_reveiller5" name="difficulte_a_dormir_toute_la_nuit_sans_se_reveiller" value=5>
+              <label for="difficulte_a_dormir_toute_la_nuit_sans_se_reveiller5">5</label>
+              
+              <input type="radio" id="difficulte_a_dormir_toute_la_nuit_sans_se_reveiller10" name="difficulte_a_dormir_toute_la_nuit_sans_se_reveiller" value=10>
+              <label for="difficulte_a_dormir_toute_la_nuit_sans_se_reveiller10">10</label>
+              
+              <h4>Besoin fréquent d’uriner</h4>
+              <input type="radio" id="besoin_frequent_duriner0" name="besoin_frequent_duriner" value=0>
+              <label for="besoin_frequent_duriner0">0</label>
+              
+              <input type="radio" id="besoin_frequent_duriner1" name="besoin_frequent_duriner" value=1>
+              <label for="besoin_frequent_duriner1">1</label>
+              
+              <input type="radio" id="besoin_frequent_duriner5" name="besoin_frequent_duriner" value=5>
+              <label for="besoin_frequent_duriner5">5</label>
+              
+              <input type="radio" id="besoin_frequent_duriner10" name="besoin_frequent_duriner" value=10>
+              <label for="besoin_frequent_duriner10">10</label>
+              
+              <h4>Maux d’estomac ou difficultés à digérer</h4>
+              <input type="radio" id="maux_destomac_ou_difficules_a_digerer0" name="maux_destomac_ou_difficules_a_digerer" value=0>
+              <label for="maux_destomac_ou_difficules_a_digerer0">0</label>
+              
+              <input type="radio" id="maux_destomac_ou_difficules_a_digerer1" name="maux_destomac_ou_difficules_a_digerer" value=1>
+              <label for="maux_destomac_ou_difficules_a_digerer1">1</label>
+              
+              <input type="radio" id="maux_destomac_ou_difficules_a_digerer5" name="maux_destomac_ou_difficules_a_digerer" value=5>
+              <label for="maux_destomac_ou_difficules_a_digerer5">5</label>
+              
+              <input type="radio" id="maux_destomac_ou_difficules_a_digerer10" name="maux_destomac_ou_difficules_a_digerer" value=10>
+              <label for="maux_destomac_ou_difficules_a_digerer10">10</label>
+              
+              <h4>Geste ou sentiment d’impatience</h4>
+              <input type="radio" id="geste_ou_sentiment_dimpatience0" name="geste_ou_sentiment_dimpatience" value=0>
+              <label for="geste_ou_sentiment_dimpatience0">0</label>
+              
+              <input type="radio" id="geste_ou_sentiment_dimpatience1" name="geste_ou_sentiment_dimpatience" value=1>
+              <label for="geste_ou_sentiment_dimpatience1">1</label>
+              
+              <input type="radio" id="geste_ou_sentiment_dimpatience5" name="geste_ou_sentiment_dimpatience" value=5>
+              <label for="geste_ou_sentiment_dimpatience5">5</label>
+              
+              <input type="radio" id="geste_ou_sentiment_dimpatience10" name="geste_ou_sentiment_dimpatience" value=10>
+              <label for="geste_ou_sentiment_dimpatience10">10</label>
+              
+              <h4>Maux de tête</h4>
+              <input type="radio" id="maux_de_tete0" name="maux_de_tete" value=0>
+              <label for="maux_de_tete0">0</label>
+              
+              <input type="radio" id="maux_de_tete1" name="maux_de_tete" value=1>
+              <label for="maux_de_tete1">1</label>
+              
+              <input type="radio" id="maux_de_tete5" name="maux_de_tete" value=5>
+              <label for="maux_de_tete5">5</label>
+              
+              <input type="radio" id="maux_de_tete10" name="maux_de_tete" value=10>
+              <label for="maux_de_tete10">10</label>
+              
+              <h4>Douleurs au dos ou à la nuque</h4>
+              <input type="radio" id="douleurs_au_dos_ou_a_la_nuque0" name="douleurs_au_dos_ou_a_la_nuque" value=0>
+              <label for="douleurs_au_dos_ou_a_la_nuque0">0</label>
+              
+              <input type="radio" id="douleurs_au_dos_ou_a_la_nuque1" name="douleurs_au_dos_ou_a_la_nuque" value=1>
+              <label for="douleurs_au_dos_ou_a_la_nuque1">1</label>
+              
+              <input type="radio" id="douleurs_au_dos_ou_a_la_nuque5" name="douleurs_au_dos_ou_a_la_nuque" value=5>
+              <label for="douleurs_au_dos_ou_a_la_nuque5">5</label>
+              
+              <input type="radio" id="douleurs_au_dos_ou_a_la_nuque10" name="douleurs_au_dos_ou_a_la_nuque" value=10>
+              <label for="douleurs_au_dos_ou_a_la_nuque10">10</label>
+              
+              <h4>Perte ou gain d’appétit</h4>
+              <input type="radio" id="perte_ou_gain_dappetit0" name="perte_ou_gain_dappetit" value=0>
+              <label for="perte_ou_gain_dappetit0">0</label>
+              
+              <input type="radio" id="perte_ou_gain_dappetit1" name="perte_ou_gain_dappetit" value=1>
+              <label for="perte_ou_gain_dappetit1">1</label>
+              
+              <input type="radio" id="perte_ou_gain_dappetit5" name="perte_ou_gain_dappetit" value=5>
+              <label for="perte_ou_gain_dappetit5">5</label>
+              
+              <input type="radio" id="perte_ou_gain_dappetit10" name="perte_ou_gain_dappetit" value=10>
+              <label for="perte_ou_gain_dappetit10">10</label>
+              
+              <h4>Perte d’intérêt pour le sexe</h4>
+              <input type="radio" id="perte_dinteret_pour_le_sexe0" name="perte_dinteret_pour_le_sexe" value=0>
+              <label for="perte_dinteret_pour_le_sexe0">0</label>
+              
+              <input type="radio" id="perte_dinteret_pour_le_sexe1" name="perte_dinteret_pour_le_sexe" value=1>
+              <label for="perte_dinteret_pour_le_sexe1">1</label>
+              
+              <input type="radio" id="perte_dinteret_pour_le_sexe5" name="perte_dinteret_pour_le_sexe" value=5>
+              <label for="perte_dinteret_pour_le_sexe5">5</label>
+              
+              <input type="radio" id="perte_dinteret_pour_le_sexe10" name="perte_dinteret_pour_le_sexe" value=10>
+              <label for="perte_dinteret_pour_le_sexe10">10</label>
+              
+              <h4>Oublis fréquents</h4>
+              <input type="radio" id="oublies_frequents0" name="oublies_frequents" value=0>
+              <label for="oublies_frequents0">0</label>
+              
+              <input type="radio" id="oublies_frequents1" name="oublies_frequents" value=1>
+              <label for="oublies_frequents1">1</label>
+              
+              <input type="radio" id="oublies_frequents5" name="oublies_frequents" value=5>
+              <label for="oublies_frequents5">5</label>
+              
+              <input type="radio" id="oublies_frequents10" name="oublies_frequents" value=10>
+              <label for="oublies_frequents10">10</label>
+              
+              <h4>Douleurs ou serrements à la poitrine</h4>
+              <input type="radio" id="douleurs_ou_serrements_a_la_poitrine0" name="douleurs_ou_serrements_a_la_poitrine" value=0>
+              <label for="douleurs_ou_serrements_a_la_poitrine0">0</label>
+              
+              <input type="radio" id="douleurs_ou_serrements_a_la_poitrine1" name="douleurs_ou_serrements_a_la_poitrine" value=1>
+              <label for="douleurs_ou_serrements_a_la_poitrine1">1</label>
+              
+              <input type="radio" id="douleurs_ou_serrements_a_la_poitrine5" name="douleurs_ou_serrements_a_la_poitrine" value=5>
+              <label for="douleurs_ou_serrements_a_la_poitrine5">5</label>
+              
+              <input type="radio" id="douleurs_ou_serrements_a_la_poitrine10" name="douleurs_ou_serrements_a_la_poitrine" value=10>
+              <label for="douleurs_ou_serrements_a_la_poitrine10">10</label>
+              
+              <h4>Conflits significatifs avec les autres</h4>
+              <input type="radio" id="conflits_significatifs_avec_les_autres0" name="conflits_significatifs_avec_les_autres" value=0>
+              <label for="conflits_significatifs_avec_les_autres0">0</label>
+              
+              <input type="radio" id="conflits_significatifs_avec_les_autres1" name="conflits_significatifs_avec_les_autres" value=1>
+              <label for="conflits_significatifs_avec_les_autres1">1</label>
+              
+              <input type="radio" id="conflits_significatifs_avec_les_autres5" name="conflits_significatifs_avec_les_autres" value=5>
+              <label for="conflits_significatifs_avec_les_autres5">5</label>
+              
+              <input type="radio" id="conflits_significatifs_avec_les_autres10" name="conflits_significatifs_avec_les_autres" value=10>
+              <label for="conflits_significatifs_avec_les_autres10">10</label>
+              
+              <h4>Difficulté à se lever après le sommeil</h4>
+              <input type="radio" id="difficulte_a_se_lever_apres_le_sommeil0" name="difficulte_a_se_lever_apres_le_sommeil" value=0>
+              <label for="difficulte_a_se_lever_apres_le_sommeil0">0</label>
+              
+              <input type="radio" id="difficulte_a_se_lever_apres_le_sommeil1" name="difficulte_a_se_lever_apres_le_sommeil" value=1>
+              <label for="difficulte_a_se_lever_apres_le_sommeil1">1</label>
+              
+              <input type="radio" id="difficulte_a_se_lever_apres_le_sommeil5" name="difficulte_a_se_lever_apres_le_sommeil" value=5>
+              <label for="difficulte_a_se_lever_apres_le_sommeil5">5</label>
+              
+              <input type="radio" id="difficulte_a_se_lever_apres_le_sommeil10" name="difficulte_a_se_lever_apres_le_sommeil" value=10>
+              <label for="difficulte_a_se_lever_apres_le_sommeil10">10</label>
+              
+              <h4>Sentiment que les choses sont hors de contrôle</h4>
+              <input type="radio" id="sentiment_que_les_choses_sont_hors_de_controle0" name="sentiment_que_les_choses_sont_hors_de_controle" value=0>
+              <label for="sentiment_que_les_choses_sont_hors_de_controle0">0</label>
+              
+              <input type="radio" id="sentiment_que_les_choses_sont_hors_de_controle1" name="sentiment_que_les_choses_sont_hors_de_controle" value=1>
+              <label for="sentiment_que_les_choses_sont_hors_de_controle1">1</label>
+              
+              <input type="radio" id="sentiment_que_les_choses_sont_hors_de_controle5" name="sentiment_que_les_choses_sont_hors_de_controle" value=5>
+              <label for="sentiment_que_les_choses_sont_hors_de_controle5">5</label>
+              
+              <input type="radio" id="sentiment_que_les_choses_sont_hors_de_controle10" name="sentiment_que_les_choses_sont_hors_de_controle" value=10>
+              <label for="sentiment_que_les_choses_sont_hors_de_controle10">10</label>
+              
+              <h4>Difficulté à faire une longue activité continue</h4>
+              <input type="radio" id="difficulte_a_faire_une_longue_activite_continue0" name="difficulte_a_faire_une_longue_activite_continue" value=0>
+              <label for="difficulte_a_faire_une_longue_activite_continue0">0</label>
+              
+              <input type="radio" id="difficulte_a_faire_une_longue_activite_continue1" name="difficulte_a_faire_une_longue_activite_continue" value=1>
+              <label for="difficulte_a_faire_une_longue_activite_continue1">1</label>
+              
+              <input type="radio" id="difficulte_a_faire_une_longue_activite_continue5" name="difficulte_a_faire_une_longue_activite_continue" value=5>
+              <label for="difficulte_a_faire_une_longue_activite_continue5">5</label>
+              
+              <input type="radio" id="difficulte_a_faire_une_longue_activite_continue10" name="difficulte_a_faire_une_longue_activite_continue" value=10>
+              <label for="difficulte_a_faire_une_longue_activite_continue10">10</label>
+              
+              <h4>Mouvements de retrait, d’isolement</h4>
+              <input type="radio" id="mouvement_de_retrait_ou_disolement0" name="mouvement_de_retrait_ou_disolement" value=0>
+              <label for="mouvement_de_retrait_ou_disolement0">0</label>
+              
+              <input type="radio" id="mouvement_de_retrait_ou_disolement1" name="mouvement_de_retrait_ou_disolement" value=1>
+              <label for="mouvement_de_retrait_ou_disolement1">1</label>
+              
+              <input type="radio" id="mouvement_de_retrait_ou_disolement5" name="mouvement_de_retrait_ou_disolement" value=5>
+              <label for="mouvement_de_retrait_ou_disolement5">5</label>
+              
+              <input type="radio" id="mouvement_de_retrait_ou_disolement10" name="mouvement_de_retrait_ou_disolement" value=10>
+              <label for="mouvement_de_retrait_ou_disolement10">10</label>
+              
+              <h4>Difficulté à s’endormir</h4>
+              <input type="radio" id="difficulte_a_sendormir0" name="difficulte_a_sendormir" value=0>
+              <label for="difficulte_a_sendormir0">0</label>
+              
+              <input type="radio" id="difficulte_a_sendormir1" name="difficulte_a_sendormir" value=1>
+              <label for="difficulte_a_sendormir1">1</label>
+              
+              <input type="radio" id="difficulte_a_sendormir5" name="difficulte_a_sendormir" value=5>
+              <label for="difficulte_a_sendormir5">5</label>
+              
+              <input type="radio" id="difficulte_a_sendormir10" name="difficulte_a_sendormir" value=10>
+              <label for="difficulte_a_sendormir10">10</label>
+              
+              <h4>Difficulté à se remettre d’un événement contrariant</h4>
+              <input type="radio" id="difficulte_a_se_remettre_dun_evenement_contrariant0" name="difficulte_a_se_remettre_dun_evenement_contrariant" value=0>
+              <label for="difficulte_a_se_remettre_dun_evenement_contrariant0">0</label>
+              
+              <input type="radio" id="difficulte_a_se_remettre_dun_evenement_contrariant1" name="difficulte_a_se_remettre_dun_evenement_contrariant" value=1>
+              <label for="difficulte_a_se_remettre_dun_evenement_contrariant1">1</label>
+              
+              <input type="radio" id="difficulte_a_se_remettre_dun_evenement_contrariant5" name="difficulte_a_se_remettre_dun_evenement_contrariant" value=5>
+              <label for="difficulte_a_se_remettre_dun_evenement_contrariant5">5</label>
+              
+              <input type="radio" id="difficulte_a_se_remettre_dun_evenement_contrariant10" name="difficulte_a_se_remettre_dun_evenement_contrariant" value=10>
+              <label for="difficulte_a_se_remettre_dun_evenement_contrariant10">10</label>
+              
+              <h4>Mains moites</h4>
+              <input type="radio" id="mains_moites0" name="mains_moites" value=0>
+              <label for="mains_moites0">0</label>
+              
+              <input type="radio" id="mains_moites1" name="mains_moites" value=1>
+              <label for="mains_moites1">1</label>
+              
+              <input type="radio" id="mains_moites5" name="mains_moites" value=5>
+              <label for="mains_moites5">5</label>
+              
+              <input type="radio" id="mains_moites10" name="mains_moites" value=10>
+              <label for="mains_moites10">10</label><br>
+              <h4>Total de l’impact du stress dans votre vie actuelle : </h4>
+              
+
+          <div>
+            <button type="submit" class="btn btn-primary btn-block">Valider</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+<br><br><br><br>
+
+<script>
+  var d = new Date();
+  document.getElementById("jour").innerHTML = ["Dimanche","Lundi","Mardi","Mercredi","Jeudi","Vendredi","Samedi"][d.getDay()];
+  document.getElementById("journumber").innerHTML = d.getDate();
+  document.getElementById("mois").innerHTML = ["Janvier","Février","Mars","Avril","Mai","Juin","Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre"][d.getMonth()];
+  document.getElementById("annee").innerHTML = d.getFullYear();
+</script>
+
+</body>
+</html>

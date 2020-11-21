@@ -1,0 +1,54 @@
+{% extends 'base2.html' %}
+{% block title %}
+<title>Home  Personnels </title>
+{% endblock title %}
+
+{% block content %}
+
+<div class="container-fluid">
+    <div class="row" style="position: absolute; top: 20%;">
+        <div class="col-md-offset-6 col-md-5">
+            <div class="col-md-12 text-center">
+                <h2>
+                    BIENVENUE SUR LE SITE DE SUIVI PERSONNEL DE KEANNOU.NET
+                </h2><br>
+            </div>
+            {% if messages %}
+            <div class="col-md-12 text-center">
+                <ul class="messages">
+                    {% for message in messages %}
+                    <li {% if message.tags %} class="alert alert-{{ message.tags }}" {% endif %}>{{ message }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+                
+            {% endif %}
+             
+            
+            {% if request.user.is_authenticated %}
+
+            <div class="col-md-8 col-xs-offset-2 col-xs-8 text-center ">
+                
+                <a href="{% url 'register_patient'%}">
+                    <div class="row justify-content-center">
+                        <input type="submit" value="Ajouter un patient" class="btn btn-primary" onclick=""/>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-8 col-xs-offset-2 col-xs-8 text-center " style="padding-top: 20px;">
+                
+                <a href="{% url 'list_patient'%}">
+                    <div class="row justify-content-center">
+                        <input type="submit" value="la liste des patients" class="btn btn-primary" onclick=""/>
+                    </div>
+                </a>
+            </div>
+            
+            {% else %}
+            Vous devez vous connectez ici <a href="{% url 'login_personnel' %}">login</a>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+{% endblock %}

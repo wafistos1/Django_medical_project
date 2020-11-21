@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+<title>Paramètres du compte </title>
+{% endblock title %}
+
+
+{% block content %}
+<div class="container">
+  <div class="row">
+        
+    <h1 class="text-center">
+      <b><span class="glyphicon glyphicon-list-alt"></span> Paramètres du compte
+    </h1><br>
+
+    <div class="col-xs-offset-3 col-xs-6">
+        <div class="well well-sm text-center">
+          {% if user.is_authenticated %}
+          <strong>Identifiant</strong> : {{ user.patient.identifier}}
+          {% endif %}
+        </div>
+        <div class="well well-sm text-center">
+          <strong>Mot de passe</strong> : XXXXXXXX <button type="button" class="btn btn-primary btn-xs">Changer</button><br>
+        </div>
+      <br><br><br><br>
+    </div>
+  </div>
+</div>
+
+{% endblock content %}

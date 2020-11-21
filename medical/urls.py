@@ -9,7 +9,9 @@ from django.conf.urls import include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('accounts.urls')),
-    path('', include('patient.urls')),
+    path('gestion/admin-app/', include('admin_app.urls')),
+    path('patient/', include('patient.urls')),
+    path('personnel/', include('doctor.urls')),
     path('accounts/', include('allauth.urls')),
 ]
 

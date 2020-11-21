@@ -1,0 +1,101 @@
+
+{% extends 'base2.html' %}
+
+{% block title %}
+<title>Liste des patients </title>
+{% endblock title %}
+
+
+
+  {% block content %}
+  <div class="container">
+    <div class="row">
+        
+      <h1 class="text-center">
+        <b><span class="glyphicon glyphicon-user"></span> Comptes</b> des patients
+      </h1>
+      
+      <div class="col-xs-offset-2 col-xs-8">
+        <h2 class="text-center">
+          Liste des patients suivis
+        </h2>
+
+        <div class="text-center">
+          <a type="button"  href="{% url 'register_patient' %}" class="btn btn-primary">Créer un nouveau compte patient</a>
+
+          {% if messages %}
+            <div class="col-md-12 text-center">
+                <ul class="messages">
+                    {% for message in messages %}
+                    <li {% if message.tags %} class="alert alert-{{ message.tags }}" {% endif %}>{{ message }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+                
+            {% endif %}
+        </div><br>
+          <table class="table">
+            <thead>
+              <tr class="active">
+                <th>
+                  Identifiant
+                </th>
+                <th>
+                  Date de création
+                </th>
+                <th>
+                  Action
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for patient in patients %}
+              <tr class="active">
+                <td>{{patient.identifier}}</td>
+                <td>{{patient.user.date_joined|date:"D d M Y" }}</td>
+                <td>
+                  <a type="button" href="{{ patient.get_delete_model_url }}" class="btn btn-danger">Supprimer</a>
+                  <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#{{ patient.identifier }}Modal">
+                    Supprimer
+                  </button>
+              <!-- Modal -->
+              <div class="modal fade" id="{{ patient.identifier }}Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="{{ patient.identifier }}Modal">Supprimer le compte N: {{ patient.identifier }} </h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <h3>Confirmer la suppression du compte patient</h3>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
+                      <a type="button"  href="{{ patient.get_delete_model_url }}" class="btn btn-danger">Confirmer</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- fin du modal -->
+                </td>
+              </tr>      
+              {% endfor %}
+            </tbody>
+          </table>
+      </div>
+    </div>
+  </div>
+
+
+ 
+<br><br><br><br>
+{% endblock content %}
+
+
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+  Launch demo modal
+</button>
+
+

@@ -1,0 +1,37 @@
+{% extends 'base2.html' %}
+{% block title %}
+<title>Paramètres du compte </title>
+{% endblock title %}
+
+{% block content %}
+    
+
+ 
+
+<body style="background-image:url('images/medecin.jpg');background-repeat: no-repeat; background-size: auto;">
+
+	<div class="container-fluid">
+		<div class="row" style="position: absolute; top: 20%;">
+			<div class="col-md-offset-6 col-md-5">
+				<div class="col-md-12 text-center">
+					<h2>
+						BIENVENUE SUR LE SITE DE SUIVI PERSONNEL DE KEANNOU.NET
+					</h2><br>
+                </div>
+                {% if request.user.is_authenticated %}
+
+				<div class="col-md-8 col-xs-offset-2 col-xs-8 text-center">
+					delete object
+                </div>
+                
+                {% else %}
+                Vous devez vous connectez ici <a href="{% url 'login_personnel' %}">login</a>
+                {% endif %}
+			</div>
+		</div>
+	</div>
+
+
+
+
+{% endblock content %}

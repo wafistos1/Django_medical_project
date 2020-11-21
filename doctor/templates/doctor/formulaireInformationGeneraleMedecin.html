@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Formulaire des informations de santé</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand glyphicon glyphicon-home 
+" href="#"></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+            <span class="glyphicon glyphicon-dashboard"></span> Dashboards<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li>
+              <a href="dashboardMedecin.html">Dashboard global</a>
+            </li>
+            <li>
+              <a href="dashboardParPatient.html">Dashboard par patient</a>
+            </li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+            <span class="glyphicon glyphicon-list-alt"></span> Formulaires<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li>
+              <a href="formulaireInformationGeneraleMedecin.html">Formulaire des informations générales</a>
+            </li>
+            <li>
+              <a href="formulaireEvaluationStressMedecin.html">Formulaire d'évaluation du niveau de stress</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="compteDesPatients.html">
+            <span class="glyphicon glyphicon-user"></span> Compte des patients</span></a>
+        </li>
+        <li>
+          <a href="parametreMedecin.html">
+            <span class="glyphicon glyphicon-wrench"></span> Paramètres</span></a>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-log-out"></span> Déconnexion</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  <div class="container">
+    <div class="row">
+        
+      <h1 class="text-center">
+        <b><span class="glyphicon glyphicon-list-alt"></span> Formulaires</b> à renseigner quotidiennement<br>
+
+        <i><span id="jour"></span> <span id="journumber"></span> <span id="mois"></span> <span id="annee"></span></i>
+      </h1>
+      
+      <div class="col-xs-offset-2 col-xs-8">
+        <form action="">
+          <h2>Informations générales</h2>
+          <div class="form-group">
+            <label for="poids">Poids :</label>
+            <input type="number" class="form-control" id="poids" placeholder="Indiquez votre poids" name="poids" min="0" max="300"><br>
+            <label for="poids">Tour de taille en cm :</label>
+            <input type="number" class="form-control" id="tour_de_taille_en_centimetre" placeholder="Indiquez votre tour de taille en cm" name="tour_de_taille_en_centimetre" min="0" max="1500">
+          </div>
+
+          <h2>Informations cardiaques et tension artérielle</h2>
+          <div class="form-group">
+            <label for="frequence_cardiaque_par_minute">Fréquence cardiaque par minute :</label>
+            <input type="number" class="form-control" id="frequence_cardiaque_par_minute" placeholder="Indiquez votre fréquence cardiaque par minute" name="frequence_cardiaque_par_minute" min="0" max="220">
+          </div>
+          <div class="form-group">
+            <label for="tension_arterielle_systolique_matin">Tension artérielle systolique (prise du matin) :</label>
+            <input type="number" class="form-control" id="tension_arterielle_systolique_matin" placeholder="Indiquez votre Tension artérielle systolique (prise du matin)" name="tension_arterielle_systolique_matin" min="0" max="220">
+          </div>
+
+          <div class="form-group">
+            <label for="tension_arterielle_systolique_soir">Tension artérielle systolique (prise du soir) :</label>
+            <input type="number" class="form-control" id="tension_arterielle_systolique_soir" placeholder="Indiquez votre Tension artérielle systolique (prise du soir)" name="tension_arterielle_systolique_soir" min="50" max="200">
+          </div>
+
+          <div class="form-group">
+            <label for="tension_arterielle_diastolique_matin">Tension artérielle diastolique (prise du matin) :</label>
+            <input type="number" class="form-control" id="tension_arterielle_diastolique_matin" placeholder="Indiquez votre Tension artérielle diastolique (prise du matin)" name="tension_arterielle_diastolique_matin" min="5" max="150">
+          </div>
+
+          <div class="form-group">
+            <label for="tension_arterielle_diastolique_soir">Tension artérielle diastolique (prise du soir) :</label>
+            <input type="number" class="form-control" id="tension_arterielle_diastolique_soir" placeholder="Indiquez votre Tension artérielle diastolique (prise du soir)" name="tension_arterielle_diastolique_soir" min="5" max="150">
+          </div>
+
+          <label for="description_symptome_cardiovasculaire">Décrivez vos symptomes cardiovasculaires en quelques mots (malaise, perte de connaissance…) :</label><br>
+            <textarea id="description_symptome_cardiovasculaire" name="description_symptome_cardiovasculaire" cols="35">
+            </textarea>
+
+          <h2>Prise de médicaments</h2>
+          <div class="form-group">
+            <label for="nombre_medicament">Nombre de médicaments pris dans la journée :</label>
+            <input type="number" class="form-control" id="nombre_medicament" placeholder="Indiquez le nombre de médicaments pris" name="nombre_medicament" min="0" max="99">
+          </div>
+
+          <div class="form-group">
+            <b>Cochez si vous êtes concerné :</b><br>
+
+            <input type="checkbox" id="oubli_medicament_matin" name="oubli_medicament_matin" value="Oui">
+            <label for="oubli_medicament_matin">Oublie de prendre le(s) médicament(s) le matin</label><br>
+
+            <input type="checkbox" id="oubli_medicament_soir" name="oubli_medicament_soir" value="Oui">
+            <label for="oubli_medicament_soir">Oublie de prendre le(s) médicament(s) le soir</label><br>
+
+            <input type="checkbox" id="effet_secondaire_remarque" name="effet_secondaire_remarque" value="Oui">
+            <label for="effet_secondaire_remarque">Effet(s) secondaire(s) remarqué(s)</label><br>
+
+            <input type="checkbox" id="symptome_particulier_remarque" name="symptome_particulier_remarque" value="Oui">
+            <label for="symptome_particulier_remarque">Symptôme(s) particulier(s) remarqué(s)</label><br><br>
+
+            <label for="description_effet_secondaire">Décrivez vos effets secondaires et/ou symptomes particuliers remarqués en quelques mots :</label><br>
+            <textarea id="description_effet_secondaire" name="description_effet_secondaire" cols="35">
+            </textarea>
+          </div>
+
+          <h2>Alimentation</h2>
+          <div class="form-group">
+            <b>Cochez si vous êtes concerné :</b><br>
+
+            <input type="checkbox" id="consommation_alcool" name="consommation_alcool" value="Oui">
+            <label for="consommation_alcool">Consommation d'alcool</label><br>
+
+            <input type="checkbox" id="grignotage_sucre" name="grignotage_sucre" value="Oui">
+            <label for="grignotage_sucre">Grignotage sucré</label><br>
+
+            <input type="checkbox" id="grignotage_sale" name="grignotage_sale" value="Oui">
+            <label for="grignotage_sale">Grignotage salé</label><br><br>
+
+            <label for="nombre_de_repas_par_jour">Nombre de repas pris durant la journée :</label>
+            <input type="number" class="form-control" id="nombre_de_repas_par_jour" placeholder="Indiquez le nombre de repas pris aujourd'hui" name="nombre_de_repas_par_jour" min="0" max="10"><br>
+
+            <label for="quantite_eau_bu">Quantité d'eau bu en litre :</label>
+            <input type="number" class="form-control" id="quantite_eau_bu" placeholder="Indiquez le nombre de litre bu" name="quantite_eau_bu" min="0" max="20">
+            <br>
+
+            <label for="quantite_alcool_bu">Quantité d'alcool consommé en litre :</label>
+            <input type="number" class="form-control" id="quantite_alcool_bu" placeholder="Indiquez le nombre de litre bu" name="quantite_alcool_bu" min="0" max="20">
+
+          </div>
+
+          <h2>Activité physique</h2>
+          <b>Cochez si vous êtes concerné :</b><br>
+
+            <input type="checkbox" id="activite_physique_presence" name="activite_physique_presence" value="Oui">
+            <label for="activite_physique_presence">J'ai eu une activité physique aujourd'hui</label><br><br>
+
+            <label for="activite_physique_nature">Décrivez la nature de votre activité physique :</label><br>
+            <textarea id="activite_physique_nature" name="activite_physique_nature" cols="35">
+            </textarea>
+
+          <div class="form-group"><br>
+            <label for="activite_physique_duree">Durée de l'activité physique en minute :</label>
+            <input type="number" class="form-control" id="activite_physique_duree" placeholder="Indiquez la durée de votre activité physique en minute" name="activite_physique_duree" min="0" max="360"><br>
+          </div>
+
+          <h2>Autres symptômes</h2>
+          <b>Cochez si vous êtes concerné :</b><br>
+
+            <input type="checkbox" id="dyspnee" name="dyspnee" value="Oui">
+            <label for="dyspnee">Présence de dyspnée</label><br>
+
+            <input type="checkbox" id="oedeme_presence" name="oedeme_presence" value="Oui">
+            <label for="oedeme_presence">Présence d'œdème</label><br>
+
+            <input type="checkbox" id="episode_infectieux_presence" name="episode_infectieux_presence" value="Oui">
+            <label for="episode_infectieux_presence">Présence d'épisode(s) infectieux</label><br>
+
+            <input type="checkbox" id="fievre_presence" name="fievre_presence" value="Oui">
+            <label for="fievre_presence">Présence de fièvre</label><br>
+
+            <input type="checkbox" id="palpitations_presence" name="palpitations_presence" value="Oui">
+            <label for="palpitations_presence">Présence de palpitation</label><br>
+
+            <input type="checkbox" id="douleur_thoracique_presence" name="douleur_thoracique_presence" value="Oui">
+            <label for="douleur_thoracique_presence">Présence de douleur thoracique</label><br>
+
+            <input type="checkbox" id="malaise_presence" name="malaise_presence" value="Oui">
+            <label for="malaise_presence">Présence de malaise</label><br>
+
+            <div class="form-group">
+              <label for="palpitations_horaire">Indiquez l'heure de début des palpitations :</label>
+              <input type="time" id="palpitations_horaire" name="palpitations_horaire" min="00:00" max="23:59"><br>
+
+              <label for="palpitations_duree">Indiquez la durée total des palpitations apparues durant la journée en minute :</label>
+              <input type="number" class="form-control" id="palpitations_duree" placeholder="Indiquez la durée total des palpitations apparues durant la journée en minute" name="palpitations_duree" min="0" max="360"><br>
+
+              <label for="douleur_thoracique_horaire">Indiquez l'heure de début des douleurs thoraciques :</label>
+              <input type="time" id="douleur_thoracique_horaire" name="douleur_thoracique_horaire" min="00:00" max="23:59"><br>
+
+              <label for="douleur_thoracique_duree">Indiquez la durée total des douleurs thoraciques apparues durant la journée en minute :</label>
+              <input type="number" class="form-control" id="douleur_thoracique_duree" placeholder="Indiquez la durée total des douleurs thoraciques apparues durant la journée en minute" name="douleur_thoracique_duree" min="0" max="360"><br>
+
+              <label for="malaise_horaire">Indiquez l'heure de début des malaises :</label>
+              <input type="time" id="malaise_horaire" name="malaise_horaire" min="00:00" max="23:59"><br>
+
+              <label for="malaise_duree">Indiquez la durée total des douleurs thoraciques apparues durant la journée en minute :</label>
+              <input type="number" class="form-control" id="malaise_duree" placeholder="Indiquez la durée total des douleurs thoraciques apparues durant la journée en minute" name="malaise_duree" min="0" max="360"><br>
+            </div>
+
+            <h2>Autres informations médicales</h2>
+
+            <div class="form-group">
+              <label for="natremie">Indiquez vos valeurs de natremie en mmol/l (millimoles par litre) :</label>
+              <input type="number" class="form-control" id="natremie" placeholder="Indiquez vos valeurs de natremie en millimoles par litre" name="natremie" min="100" max="200" step="0.001"><br>
+
+              <label for="potassium">Indiquez vos valeurs de potassium en mmol/l (millimoles par litre) :</label>
+              <input type="number" class="form-control" id="potassium" placeholder="Indiquez vos valeurs de potassium en millimoles par litre" name="potassium" min="20" max="250" step="0.001"><br>
+
+              <label for="creatinine">Indiquez vos valeurs de créatinine en μmol/l (micromoles par litre) :</label>
+              <input type="number" class="form-control" id="creatinine" placeholder="Indiquez vos valeurs de créatinine en micromoles par litre" name="creatinine" min="10" max="200" step="0.001"><br>
+
+              <label for="clairance_de_la_creatinine_mdrd">Indiquez vos valeurs de clairance de créatinine en ml/m (millilitres par minutes) :</label>
+              <input type="number" class="form-control" id="clairance_de_la_creatinine_mdrd" placeholder="Indiquez vos valeurs de clairance de créatinine en millilitres par minutes (ml/min)" name="clairance_de_la_creatinine_mdrd" min="40" max="200" step="0.001"><br>
+
+              <label for="ntprobnp">Indiquez votre taux de NT Probnp en ng/l (nanogrammes par litre) :</label>
+              <input type="number" class="form-control" id="ntprobnp" placeholder="Indiquez votre taux de NT Probnp en nanogrammes par litre (ng/L)" name="ntprobnp" min="0" max="1500" step="0.001"><br>
+
+              <label for="fer_serique">Indiquez votre taux de fer sérique mg/l (milligrame par litre) :</label>
+              <input type="number" class="form-control" id="fer_serique" placeholder="Indiquez votre taux de fer sérique milligrame par litre (mg/l)" name="fer_serique" min="0" max="2" step="0.001"><br>
+
+              <label for="taux_hemoglobine">Indiquez votre taux d'hémoglobine en g/100 ml (gramme par 100 millilitre) :</label>
+              <input type="number" class="form-control" id="taux_hemoglobine" placeholder="Indiquez votre taux d'hémoglobine en g/100 mL" name="taux_hemoglobine" min="8" max="22" step="0.001"><br>
+
+              <label for="vs">Indiquez vos valeurs de Vitesse de sédimentation (VS) en milimètre :</label>
+              <input type="number" class="form-control" id="vs" placeholder="Indiquez vos valeurs de Vitesse de sédimentation (VS) en milimètre" name="vs" min="5" max="35" step="0.001"><br>
+
+              <label for="crp">Indiquez votre taux protéine C réactive en mg/l :</label>
+              <input type="number" class="form-control" id="crp" placeholder="Indiquez votre taux protéine C réactive en mg/L" name="crp" min="0" max="20" step="0.001"><br>
+
+              <label for="troponine">Indiquez votre taux de troponine en μg/l (microgrammes par litre) :</label>
+              <input type="number" class="form-control" id="troponine" placeholder="Indiquez votre taux de troponine en microgrammes par litre (μg/L)" name="troponine" min="0" max="2" step="0.001"><br>
+
+              <label for="taux_vitamine_d">Indiquez votre taux de vitamine D en ng/ml de sang :</label>
+              <input type="number" class="form-control" id="taux_vitamine_d" placeholder="Indiquez votre taux de vitamine D en ng/ml de sang" name="taux_vitamine_d" min="10" max="75" step="0.001"><br>
+
+              <label for="taux_acide_urique">Indiquez votre taux d'acide urique en mg/l :</label>
+              <input type="number" class="form-control" id="taux_acide_urique" placeholder="Indiquez votre taux d'acide urique en mg/L" name="taux_acide_urique" min="10" max="120" step="0.001"><br>
+
+              <label for="ntprobnp">Indiquez votre taux de INR (International Normalized Ratio) :</label>
+              <input type="number" class="form-control" id="ntprobnp" placeholder="Indiquez votre taux de INR (International Normalized Ratio)" name="ntprobnp" min="0" max="10" step="0.001"><br>
+            </div>
+          <div>
+            <button type="submit" class="btn btn-primary btn-block">Valider</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+<br><br><br><br>
+
+<script>
+  var d = new Date();
+  document.getElementById("jour").innerHTML = ["Dimanche","Lundi","Mardi","Mercredi","Jeudi","Vendredi","Samedi"][d.getDay()];
+  document.getElementById("journumber").innerHTML = d.getDate();
+  document.getElementById("mois").innerHTML = ["Janvier","Février","Mars","Avril","Mai","Juin","Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre"][d.getMonth()];
+  document.getElementById("annee").innerHTML = d.getFullYear();
+</script>
+
+</body>
+</html>

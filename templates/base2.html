@@ -1,0 +1,102 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+  <head>
+{% block title %}
+
+<title>Compte des Personnels </title>
+
+{% endblock title %}
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </head>
+<body>
+{% block navbar %}
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand glyphicon glyphicon-home 
+" href="#"></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+            <span class="glyphicon glyphicon-dashboard"></span> Dashboards<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li>
+              <a href="dashboardMedecin.html">Dashboard global</a>
+            </li>
+            <li>
+              <a href="dashboardParPatient.html">Dashboard par patient</a>
+            </li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+            <span class="glyphicon glyphicon-list-alt"></span> Formulaires<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li>
+              <a href="formulaireInformationGeneraleMedecin.html">Formulaire des informations générales</a>
+            </li>
+            <li>
+              <a href="formulaireEvaluationStressMedecin.html">Formulaire d'évaluation du niveau de stress</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="{% url 'list_patient' %}">
+            <span class="glyphicon glyphicon-user"></span> Compte des patients</span></a>
+        </li>
+        <li>
+          <a href="parametreMedecin.html">
+            <span class="glyphicon glyphicon-wrench"></span> Paramètres</span></a>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        {% if user.is_authenticated %}
+        
+        <li><a href="{% url 'logout_personnel' %}"><span class="glyphicon glyphicon-log-out"></span> Déconnexion</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-user"></span> {{ user.costumuser.identifier }}</a></li>
+        
+        {% else %}
+        
+
+        <li><a href="{% url 'login_personnel' %}"><span class="glyphicon glyphicon-log-out"></span> Connexion</a></li>
+        {% endif %}
+      </ul>
+    </div>
+  </div>
+</nav>
+{% endblock navbar %}
+
+{% block content %}
+
+
+
+{% endblock content %}
+
+{% block script_content %}
+<script>
+
+    
+  var d = new Date();
+  document.getElementById("jour").innerHTML = ["Dimanche","Lundi","Mardi","Mercredi","Jeudi","Vendredi","Samedi"][d.getDay()];
+  document.getElementById("journumber").innerHTML = d.getDate();
+  document.getElementById("mois").innerHTML = ["Janvier","Février","Mars","Avril","Mai","Juin","Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre"][d.getMonth()];
+  document.getElementById("annee").innerHTML = d.getFullYear();
+</script>
+{% endblock script_content %}
+
+</body>
+</html>
